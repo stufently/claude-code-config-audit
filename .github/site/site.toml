@@ -1,0 +1,47 @@
+# Site config for .github/site/build.py. Everything else comes from README.md.
+name = "Claude Code Config Audit"
+title = "Очистка профиля Claude Code перед сменой аккаунта"
+headline = "Скрипты для очистки профиля и учётных данных Claude Code"
+description = "Удаляют конфиг и учётные данные Claude Code перед входом в другой аккаунт: bash для Linux и macOS, PowerShell для Windows, режим проверки без удаления."
+lang = "ru"
+keywords = ["claude code", "очистка claude code", "claude.json", "credentials.json", "смена аккаунта claude", "claude code logout", "powershell", "bash"]
+# В репозитории нет файла лицензии.
+license = "не указана"
+license_url = "https://github.com/stufently/claude-code-config-audit"
+category = "UtilitiesApplication"
+os = "Linux, macOS, Windows"
+programming_language = "Shell, PowerShell"
+eyebrow = "Open source · Bash и PowerShell"
+download_url = "https://github.com/stufently/claude-code-config-audit"
+
+# README "## <name>" sections shown on the home page, in this order (exact titles).
+landing_sections = ["Что удаляют скрипты", "Использование", "После очистки"]
+
+# Статья, на которую ссылается README, — отдельной страницей.
+pages = ["article.md"]
+docs_dir = ""
+
+features = [
+  "Удаляют ~/.claude.json, ~/.claude/.credentials.json, альтернативные конфиги и резервные копии ~/.claude/backups/.claude.json.backup.*.",
+  "Перед удалением завершают все процессы Claude Code.",
+  "Режим проверки без удаления: --dry-run в bash и -DryRun в PowerShell.",
+  "Не трогают логи, settings.json и проектные настройки .claude/ в каталогах проектов.",
+  "Linux и macOS — cleanup.sh, Windows — cleanup.ps1; запуск после git clone или одной командой.",
+  "audit.sh проверяет права файла учётных данных в Linux.",
+]
+
+[[faq]]
+q = "Какие файлы Claude Code удаляют скрипты?"
+a = "Основной конфиг ~/.claude.json, токены ~/.claude/.credentials.json, альтернативные конфиги ~/.claude/.claude.json и ~/.claude/.config.json, если они есть, и резервные копии ~/.claude/backups/.claude.json.backup.*."
+
+[[faq]]
+q = "Можно ли сначала посмотреть, что будет удалено?"
+a = "Да. Запустите cleanup.sh с флагом --dry-run в Linux и macOS или cleanup.ps1 с параметром -DryRun в Windows: скрипт покажет файлы, ничего не удаляя."
+
+[[faq]]
+q = "Удаляют ли скрипты API-ключи из settings.json?"
+a = "Нет. settings.json скрипты не изменяют, API-ключи оттуда нужно удалить вручную. Переменные окружения тоже не очищаются — после запуска откройте новый терминал."
+
+[[faq]]
+q = "Что делать после очистки?"
+a = "Откройте новый терминал, проверьте settings.json и удалите API-ключи, если они там были, затем запустите claude и авторизуйтесь в новом аккаунте. Старый конфиг не восстанавливайте."
