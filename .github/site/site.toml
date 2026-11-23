@@ -5,13 +5,12 @@ headline = "Скрипты для очистки профиля и учётны�
 description = "Удаляют конфиг и учётные данные Claude Code перед входом в другой аккаунт: bash для Linux и macOS, PowerShell для Windows, режим проверки без удаления."
 lang = "ru"
 keywords = ["claude code", "очистка claude code", "claude.json", "credentials.json", "смена аккаунта claude", "claude code logout", "powershell", "bash"]
-# В репозитории нет файла лицензии.
-license = "не указана"
-license_url = "https://github.com/stufently/claude-code-config-audit"
+license = "MIT"
+license_url = "https://opensource.org/license/mit"
 category = "UtilitiesApplication"
 os = "Linux, macOS, Windows"
 programming_language = "Shell, PowerShell"
-eyebrow = "Open source · Bash и PowerShell"
+eyebrow = "Open source · MIT · Bash и PowerShell"
 download_url = "https://github.com/stufently/claude-code-config-audit"
 
 # README "## <name>" sections shown on the home page, in this order (exact titles).
